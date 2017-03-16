@@ -1,0 +1,31 @@
+/* add your CSS here */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+span {
+  font-weight: bold;
+  font-size: 1em;
+}
+.card {
+  border: 2px solid #aaaaaa;
+  border-radius: 5px;
+  width: 320px;
+  box-shadow: 5px 5px 5px #aaaaaa;
+}
+.name {
+  margin: 10px;
+  padding: 5px;
+}
+
+.image {
+  margin: 10px;
+}
+
+.information {
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #aaaaaa;
+  font-size: 0.8em;
+}
