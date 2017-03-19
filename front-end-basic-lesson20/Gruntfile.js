@@ -27,8 +27,7 @@ module.exports = function(grunt) {
             width: 800 
             /*suffix: _x2,*/
             /*quality: 20*/
-          }]
-        },
+        }]
 
         /*
         You don't need to change this part if you don't change
@@ -40,6 +39,7 @@ module.exports = function(grunt) {
           cwd: 'images_src/',
           dest: 'images/'
         }]
+      }
     },
 
     /* Clear out the images directory if it exists */
@@ -75,6 +75,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive-images']);
+  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
 
 };
