@@ -9,26 +9,16 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    imagemin: {
-      dynamic: {
-        files: [{
-          expand: true,
-          cwd: 'images_src/',
-          src: ['*.{gif,jpg,png}'],
-          dest: 'images/'
-        }]
-      }
-    },
-
     responsive_images: {
       dev: {
-        options: { },
-        sizes: [{
-            width: 800 
-            /*suffix: _x2,*/
-            /*quality: 20*/
-        }]
-
+        options: { 
+          engine: 'im',
+          sizes: [{
+            width: 500, 
+            suffix: '_small',
+            quality: 50
+          }]
+        },
         /*
         You don't need to change this part if you don't change
         the directory structure.
@@ -74,7 +64,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-mkdir');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.registerTask('default', ['clean', 'mkdir', 'copy', 'responsive_images']);
+  grunt.registerTask('default', ['responsive_images']);
 
 };
