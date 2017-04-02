@@ -1,107 +1,74 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset=utf-8>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-    <link type="text/javascript" src="js/jquery-3.1.1.slim.js">
-    <link type="text/javascript" src="js/bootstrap.min.js">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=deivce-width, initial-scale=1">
+    <title>Myron Works</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,500"
+    rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
+
   <body>
-    <header>
-      <div>
-        <div>
-          <h1>Jane Doette</h1>
-          <h3>Front-end Ninja</h3>
+    <header class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="title-logo" src="img/myron-logo.png" alt="Myron logo">
+        </div>
+        <div class="col-md-8 text-right text-uppercase">
+          <h1 class="title-super text-thin">Myron Zhang</h1>
+          <h3>Front-end Noob</h4>
         </div>
       </div>
     </header>
-    <section>
-      <div>
-        <img src="./img/Didiers_Tulip.JPG" alt="Didiers Tulip">
-        <p>
-          Tulipa gesneriana, the Didier's tulipor garden tulip, is a species of
-          plants in the lily family, cultivated as an ornamental in many countries
-          because of its large, showy flowers. Its region of origin is not entirely
-          certain, but the species is widely believed to have originated in Turkey,
-          as is the case with many species of tulips that came into Europe from the
-          Ottoman Empire.It has become naturalised in parts of central and
-          southern Europeand scattered locations in North America.Most of
-          the cultivated forms of tulip are derived from Tulipa gesneriana.
-        </p>
-      </div>
-      <div>
-        <h2>Featured Work</h2>
-      </div>
-      <div>
-        <div>
-          <img src="./img/Goldenmane_Tickseed.JPG" alt="Goldenmane Tickseed">
-          <h3>Appify</h3>
-          <p><a href="http://github.com/">Link to project</a></p>
-        </div>
 
-        <div>
-          <p> 
-            The species is perennial and reproduces asexually. This plant produces
-            tall colorful flowers in season. The flowers may be red, yellow, pink,
-            or orange.
-          </p>
-          <img src="./img/Barberton_Daisy.JPG" alt="Barberton Daisy"></div>
-        <div>
-          <p>
-            The tree's ellipsoidal yellow fruit is used for culinary and
-            non-culinary purposes throughout the world, primarily for its juice,
-            which has both culinary and cleaning uses.[2] The pulp and rind (zest)
-            are also used in cooking and baking. The juice of the lemon is about 5%
-            to 6% citric acid, which gives a sour taste. The distinctive sour taste
-            of lemon juice makes it a key ingredient in drinks and foods such as
-            lemonade and lemon meringue pie.
-          </p>
-          <img src="./img/Lemon.JPG" alt="Lemon">
-          <h3>Appify</h3>
-          <p><a href="http://github.com/">Link to project</a></p>
-        </div>
-        <div>
-          <img src="./img/Water_Lily.JPG" alt="Water Lily">
-          <p>
-            Nymphaeaceae /ˌnɪmfiːˈeɪsiː/ is a family of flowering plants, commonly
-            called water lilies. They live as rhizomatous aquatic herbs in temperate
-            and tropical climates around the world. The family contains five genera
-            with about 70 known species.[2] Water lilies are rooted in soil in
-            bodies of water, with leaves and flowers floating on or emergent from
-            the surface. The leaves are round, with a radial notch in Nymphaea and
-            Nuphar, but fully circular in Victoria and Euryale.
-          </p>
-          <h3>Appify</h3>
-          <p><a href="http://github.com/">Link to project</a></p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img src="./bootstrap-prestructure_files/555x300">
-          <h3>Appify</h3>
-          <p><a href="http://github.com/">Link to project</a></p>
-        </div>
-        <div>
-          <img class="img-responsive" src="./bootstrap-prestructure_files/555x300" data-toggle="modal" data-target="#project1">
-          <h3>Appify</h3>
-          <p><a href="http://github.com/">Link to project</a></p>
-        </div>
-      </div>
-    </section>
-    <!-- Modal -->
-    <div class="modal fade" id="project1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="myModalLabel">Favorite App Page</h4>
-          </div>
-          <div class="modal-body">
-            <img class="img-responsive" src="./bootstrap-prestructure_files/555x300">This was my first project in this class. I learned a lot about HTML and CSS.
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+    <!-- Horizontal split line -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <hr class="line-super">
         </div>
       </div>
     </div>
-</body></html>
+
+    <section class="container"> 
+      <article class="row">
+        <picture class= "col-md-12">
+          <img class="img-responsive" src="img/1140x350" alt="Latest Project">
+        </picture>
+      </article>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-splitted">Featured Work</h2>
+        </div>
+      </div>
+
+      <article class="row text-center">
+        <section class="col-md-4">
+          <img class="img-responsive" src="img/555x300" alt="Basic Lesson 8">
+          <h3 class="text-uppercase">Basic Lesson 8</h3>
+          <p><a
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson8">https://github.com/abenzm/course/.../front-end-basic-lesson8</a></p>
+        </section>
+        <section class="col-md-4">
+          <img class="img-responsive" src="img/555x300" alt="Basic Lesson 18">
+          <h3 class="text-uppercase">Basic Lesson 18</h3>
+          <p><a
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson18">https://github.com/abenzm/course/.../front-end-basic-lesson18</a></p>
+        </section>
+        <section class="col-md-4">
+          <img class="img-responsive" src="img/555x300" alt="Basic Lesson 22">
+          <h3 class="text-uppercase">Basic Lesson</h3>
+          <p><a
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson22"</a>https://github.com/abenzm/course/.../front-end-basic-lesson22</p>
+        </section>
+      </article>
+    </section>
+
+    <footer>
+    </footer>
+  </body>
+</html>
