@@ -1,17 +1,46 @@
-@import url(http://weloveiconfonts.com/api/?family=zocial);
-
 /* zocial */
-[class*="zocial-"]:before {
+[class*="zocial-"]::before {
   display: inline-block;
-  font-family: 'zocial', sans-serif;
+  font-family: "zocial", sans-serif;
   text-shadow: 3px 3px 3px #aaa;
   width: 2em;
 }
 
+div#social {
+  line-height: 2em;
+}
+
+div#social a {
+  margin: 0 1em 0 0;
+}
+
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   color: #2d3c49;
   font-weight: 500;
+}
+
+p {
+  text-align: left;
+}
+
+figcaption {
+  color: red;
+  padding: 1em 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+figure {
+  margin: 1em 0 1em 0;
+}
+
+article {
+  border-bottom: 2px solid #ddd;
+}
+
+header {
+  border-bottom: 4px solid #ddd;
 }
 
 .text-splitted {
@@ -29,8 +58,3 @@ body {
 .title-logo {
   margin-top: 30px;
 }
-
-.line-super {
-  line-height: 100px;
-}
-
