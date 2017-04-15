@@ -30,16 +30,17 @@ p {
   text-align: center;
 }
 
-figure {
+picture {
   margin: 1em 0 1em 0;
 }
 
-article {
+.arts {
   border-bottom: 2px solid #ddd;
 }
 
 header {
   border-bottom: 4px solid #ddd;
+  margin-bottom: 4px;
 }
 
 .text-splitted {
