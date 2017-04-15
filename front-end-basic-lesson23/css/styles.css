@@ -1,4 +1,3 @@
-/* zocial */
 [class*="zocial-"]::before {
   display: inline-block;
   font-family: "zocial", sans-serif;

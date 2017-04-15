@@ -14,10 +14,12 @@
   <body>
     <header class="container">
       <div class="row">
-        <div class="col-md-4">
-          <img class="title-logo" src="img/myron-logo.png" alt="Myron logo">
+        <div class="col-md-5">
+          <!--img class="title-logo" src="img/myron-logo.svg" alt="Myron logo"-->
+          <object class="title-logo" type="image/svg+xml"
+            data="img/myron-logo.svg" width="70vw"></object>
         </div>
-        <div class="col-md-8 text-right text-uppercase">
+        <div class="col-md-7 text-right text-uppercase">
           <h1 class="title-super text-thin">Myron Zhang</h1>
           <h3>Front-end Noob</h4>
         </div>
@@ -26,12 +28,16 @@
 
     <article class="container"> 
       <section class="row">
-        <figure class= "col-md-12">
-          <img class="img-responsive" src="img/Barberton_Daisy.jpg" alt="Latest Project">
+        <figure>
+          <picture class="col-md-12">
+            <source srcset="img/1600/Barberton_Daisy.jpg" media="(min-width: 800px)">
+            <source srcset="img/800/Barberton_Daisy.jpg" media="(min-width: 600px)">
+            <img class="img-responsive" src="img/500/Barberton_Daisy.jpg" alt="Barberton Daisy">
+          </picture>
           <figcaption>Barberton Daisy</figcaption>
         </figure>
         <p>
-          Gerbera jamesonii is a species of flowering plant in the genus
+          Barberton Daisy is a species of flowering plant in the genus
           Gerbera. It is indigenous to South Eastern Africa and commonly known
           as the Barberton daisy, the Transvaal daisy, and as
           Barbertonse madeliefie in Afrikaans.
@@ -47,8 +53,13 @@
       <section class="row text-center">
         <section class="col-md-4">
           <figure>
-          <img class="img-responsive" src="img/Didiers_Tulip.jpg" alt="Basic Lesson 8">
-          <figcaption>Didiers Tulip</figcaption>
+            <picture>
+              <source srcset="img/1600/Didiers_Tulip.jpg" media="(min-width: 800px)">
+              <source srcset="img/800/Didiers_Tulip.jpg" media="(min-width: 600px)">
+              <img class="img-responsive" src="img/500/Didiers_Tulip.jpg"
+              alt="Didiers Tulip">
+            </picture>
+            <figcaption>Didiers Tulip</figcaption>
           </figure>
           <p>
             Tulipa gesneriana, the Didier's tulip or garden tulip, is a
@@ -62,14 +73,19 @@
             forms of tulip are derived from Tulipa gesneriana.
           </p>
           <p><a
-            href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson8">
-            https://github.com/.../front-end-basic-lesson8</a></p>
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson8">
+              https://github.com/.../front-end-basic-lesson8</a></p>
         </section>
 
         <section class="col-md-4">
           <figure>
-          <img class="img-responsive" src="img/Goldenmane_Tickseed.jpg" alt="Basic Lesson 18">
-          <figcaption>Goldenmane Tickseed</figcaption>
+            <picture>
+              <source srcset="img/1600/Goldenmane_Tickseed.jpg" media="(min-width: 800px)">
+              <source srcset="img/800/Goldenmane_Tickseed.jpg" media="(min-width: 600px)">
+              <img class="img-responsive" src="img/500/Goldenmane_Tickseed.jpg"
+              alt="Goldenmane Tickseed">
+            </picture>
+            <figcaption>Goldenmane Tickseed</figcaption>
           </figure>
 
           <p>
@@ -80,14 +96,19 @@
             California.
           </p>
           <p><a
-            href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson18">
-            https://github.com/.../front-end-basic-lesson18</a></p>
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson18">
+              https://github.com/.../front-end-basic-lesson18</a></p>
         </section>
 
         <section class="col-md-4">
           <figure>
-          <img class="img-responsive" src="img/Lemon.jpg" alt="Lemon">
-          <figcaption>Lemon</figcaption >
+            <picture>
+              <source srcset="img/1600/Lemon.jpg" media="(min-width: 800px)">
+              <source srcset="img/800/Lemon.jpg" media="(min-width: 600px)">
+              <img class="img-responsive" src="img/500/Lemon.jpg"
+              alt="Lemon">
+            </picture>
+            <figcaption>Lemon</figcaption>
           </figure>
 
           <p>
@@ -102,7 +123,7 @@
             drinks and foods such as lemonade and lemon meringue pie.
           </p>
           <p><a
-            href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson22"
+              href="https://github.com/abenzm/course/tree/master/front-end-basic-lesson22"
           </a>https://github.com/.../front-end-basic-lesson22</p>
         </section>
       </section>
