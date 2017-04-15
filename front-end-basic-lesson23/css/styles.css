@@ -23,7 +23,7 @@ p {
   text-align: left;
 }
 
-figcaption {
+#title-main-feature {
   color: red;
   padding: 1em 0;
   font-size: 18px;
