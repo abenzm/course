@@ -119,51 +119,14 @@ The <head> of a website generally links to important resources the page will
                   /*
                   an opening and closing set of slash asterisks for block comments.
                   */
-                  if (bio.name.length > 0) {
-                    $("#header").append(HTMLheaderName.replace("%data%",
-                    bio.name));
-                  }
-                  if (bio.skill.length > 0 ) {
-                    $("#header").append(HTMLskillsStart);
-                    $("#skills").append(HTMLskills.replace("%data%", bio.skill[0]));
-                    $("#skills").append(HTMLskills.replace("%data%", bio.skill[1]));
-                    $("#skills").append(HTMLskills.replace("%data%", bio.skill[2]));
-                  }
-                  for (job in work.jobs) {
-                    $("#workExperience").append(HTMLworkStart);
-
-                    var workEmployer = HTMLworkEmployer.replace("%data%",
-                    work.jobs[job].employer);
-                    var workTitle =
-                    HTMLworkTitle.replace("%data%",work.jobs[job].title);
-                    var workEmployerTitle = workEmployer + workTitle; 
-                    $(".work-entry:last").append(workEmployerTitle);
-                    $(".work-entry:last").append(HTMLworkDates.replace("%data%",
-                    work.jobs[job].workDate));
-                    $(".work-entry:last").
-                    append(HTMLworkLocation.replace("%data%",
-                    work.jobs[job].location));
-                    $(".work-entry:last").append(HTMLworkDescription.replace("%data%",work.jobs[job].desc));
-                  }
-
-                  // Click function
-                  $(document).click(function(loc) {
-                    console.log(loc.pageX + "," + loc.pageY);
-                  });
-
-                  // International button
-                  $("#main").append(internationalizeButton);
-
-                  function inName(name) {
-                    var nameArray = name.split(" ");
-                    var firstName = nameArray[0].slice(0,1).toUpperCase() +
-                    nameArray[0].slice(1).toLowerCase();
-                    var lastName = nameArray[1].toUpperCase();
-                    return lastName + " " + firstName;
-                  }
+                  bio.display();
+                  
+                  work.display();
 
                   // call projects' display function
                   projects.display();
+
+                  education.display();
 
                   // display where I live.
                   //$("#mapDiv").append(googleMap);
