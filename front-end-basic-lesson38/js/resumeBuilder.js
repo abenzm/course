@@ -5,7 +5,7 @@ var bio = {
   "name": "Myron Zhang",
   "role": "Software Managment",
   "contacts": {
-    "mobile": "+8618566680567",
+    "mobile": "+86 18566680567",
     "email": "myron.z.zhang@gmail.com",
     "github": "myron-z-zhang",
     "twitter": "@zhang-myron",
@@ -24,19 +24,24 @@ var bio = {
     }
     if (this.contacts.mobile.length > 0) {
       $("#topContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
+      $("#footerContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
     }
     if (this.contacts.email.length > 0) {
       $("#topContacts").append(HTMLemail.replace("%data%", this.contacts.email));
+      $("#footerContacts").append(HTMLemail.replace("%data%", this.contacts.email));
     }
     if (this.contacts.twitter.length > 0) {
       $("#topContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
+      $("#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
     }
     if (this.contacts.github.length > 0) {
       $("#topContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
+      $("#footerContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
     }
     if (this.contacts.location.length > 0) {
       $("#topContacts").append(HTMLlocation.replace("%data%", this.contacts
         .location));
+      $("#footerContacts").append(HTMLlocation.replace("%data%", this.contacts.location));
     }
 
     if (this.biopic.length > 0) {
@@ -152,7 +157,7 @@ education.display = function() {
       education.schools[school].major));
   }
 
-  $("#education").append(HTMLonlineClasses);
+  $(".education-entry:last").append(HTMLonlineClasses);
   for (course in education.onlineCourse) {
     var onlineTitle = HTMLonlineTitle.replace("%data%",
       education.onlineCourse[course].title);
@@ -175,26 +180,25 @@ var projects = {
       "dates": "Mar 2017",
       "description": "Yongyida robot OS 2",
       "images": [
-        "images/yos2_1.jpg",
-        "images/yos2_2.jpg",
-      ]
+        "images/yos2_1.png",
+        "images/yos2_2.png",
+      ],
     },
     {
       "title": "YOS1",
       "dates": "Apr 2016",
       "description": "Yongyida robot OS 1",
       "images": [
-        "images/yos1_1.jpg",
-        "images/yos1_2.jpg",
-      ]
+        "images/yos1_1.png",
+        "images/yos1_2.png",
+      ],
     },
   ]
 };
 
 projects.display = function() {
+  $("#projects").append(HTMLprojectStart);
   for (project in projects.projects) {
-    $("#projects").append(HTMLprojectStart);
-
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[
       project].title);
     $(".project-entry:last").append(formattedTitle);
@@ -204,6 +208,10 @@ projects.display = function() {
     var formattedDesc = HTMLprojectDescription.replace("%data%", projects.projects[
       project].description);
     $(".project-entry:last").append(formattedDesc);
+    for (image in projects.projects[project].images) {
+      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+      $(".project-entry:last").append(formattedImage); 
+    }
   }
 }
 
