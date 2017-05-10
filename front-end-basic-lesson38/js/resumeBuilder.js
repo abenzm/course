@@ -11,7 +11,7 @@ var bio = {
     "twitter": "@zhang-myron",
     "location": "Shenzhen China",
   },
-  "biopic": "images/myron-logo.svg",
+  "biopic": "images/logo.jpg",
   "welcomeMessage": "Welcome to Myron's blog!",
   "skills": ["Computer", "Swimming", "Driving", "Travel freely"],
   display: function() {
@@ -45,15 +45,15 @@ var bio = {
     }
 
     if (this.biopic.length > 0) {
-      $("#topContacts").append(HTMLbioPic.replace("%data%", this.biopic));
+      $("#header").append(HTMLbioPic.replace("%data%", this.biopic));
     }
     if (this.welcomeMessage.length > 0) {
-      $("#topContacts").append(HTMLwelcomeMsg.replace("%data%", this.welcomeMessage));
+      $(".biopic").after(HTMLwelcomeMsg.replace("%data%", this.welcomeMessage));
     }
 
-    $(".welcome-message").append(HTMLskillsStart);
+    $(".welcome-message").after(HTMLskillsStart);
     for (skill in this.skills) {
-      $("#skills-h3").append(HTMLskills.replace("%data%", this.skills[skill]));
+      $("#skills").append(HTMLskills.replace("%data%", this.skills[skill]));
     }
   },
 };
