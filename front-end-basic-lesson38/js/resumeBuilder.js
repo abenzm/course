@@ -24,24 +24,29 @@ var bio = {
     }
     if (this.contacts.mobile.length > 0) {
       $("#topContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
-      $("#footerContacts").append(HTMLmobile.replace("%data%", this.contacts.mobile));
+      $("#footerContacts").append(HTMLmobile.replace("%data%", this.contacts
+        .mobile));
     }
     if (this.contacts.email.length > 0) {
       $("#topContacts").append(HTMLemail.replace("%data%", this.contacts.email));
-      $("#footerContacts").append(HTMLemail.replace("%data%", this.contacts.email));
+      $("#footerContacts").append(HTMLemail.replace("%data%", this.contacts
+        .email));
     }
     if (this.contacts.twitter.length > 0) {
       $("#topContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
-      $("#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
+      $("#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts
+        .twitter));
     }
     if (this.contacts.github.length > 0) {
       $("#topContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
-      $("#footerContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
+      $("#footerContacts").append(HTMLgithub.replace("%data%", this.contacts
+        .github));
     }
     if (this.contacts.location.length > 0) {
       $("#topContacts").append(HTMLlocation.replace("%data%", this.contacts
         .location));
-      $("#footerContacts").append(HTMLlocation.replace("%data%", this.contacts.location));
+      $("#footerContacts").append(HTMLlocation.replace("%data%", this.contacts
+        .location));
     }
 
     if (this.biopic.length > 0) {
@@ -52,7 +57,7 @@ var bio = {
     }
 
     $(".welcome-message").after(HTMLskillsStart);
-    for (skill in this.skills) {
+    for (var skill in this.skills) {
       $("#skills").append(HTMLskills.replace("%data%", this.skills[skill]));
     }
   },
@@ -104,7 +109,7 @@ var work = {
   ]
 };
 work.display = function() {
-  for (job in work.jobs) {
+  for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
     var workEmployer = HTMLworkEmployer.replace("%data%",
@@ -121,7 +126,7 @@ work.display = function() {
     $(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[
       job].description));
   }
-}
+};
 
 var education = {
   "schools": [{
@@ -141,7 +146,7 @@ var education = {
 };
 education.display = function() {
   $("#education").append(HTMLschoolStart);
-  for (school in education.schools) {
+  for (var school in education.schools) {
     var schoolName = HTMLschoolName.replace("%data%",
       education.schools[school].name);
     var schoolDegree =
@@ -158,7 +163,7 @@ education.display = function() {
   }
 
   $(".education-entry:last").append(HTMLonlineClasses);
-  for (course in education.onlineCourse) {
+  for (var course in education.onlineCourse) {
     var onlineTitle = HTMLonlineTitle.replace("%data%",
       education.onlineCourse[course].title);
     var onlineSchool =
@@ -172,7 +177,7 @@ education.display = function() {
       education.onlineCourse[course].url));
   }
 
-}
+};
 
 var projects = {
   "projects": [{
@@ -198,7 +203,7 @@ var projects = {
 
 projects.display = function() {
   $("#projects").append(HTMLprojectStart);
-  for (project in projects.projects) {
+  for (var project in projects.projects) {
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[
       project].title);
     $(".project-entry:last").append(formattedTitle);
@@ -208,11 +213,12 @@ projects.display = function() {
     var formattedDesc = HTMLprojectDescription.replace("%data%", projects.projects[
       project].description);
     $(".project-entry:last").append(formattedDesc);
-    for (image in projects.projects[project].images) {
-      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-      $(".project-entry:last").append(formattedImage); 
+    for (var image in projects.projects[project].images) {
+      var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[
+        project].images[image]);
+      $(".project-entry:last").append(formattedImage);
     }
   }
-}
+};
 
 $("#mapDiv").append(googleMap);
