@@ -34,8 +34,7 @@ var bio = {
     }
     if (this.contacts.twitter.length > 0) {
       $("#topContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
-      $("#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts
-        .twitter));
+      $("#footerContacts").append(HTMLtwitter.replace("%data%", this.contacts.twitter));
     }
     if (this.contacts.github.length > 0) {
       $("#topContacts").append(HTMLgithub.replace("%data%", this.contacts.github));
@@ -57,9 +56,9 @@ var bio = {
     }
 
     $(".welcome-message").after(HTMLskillsStart);
-    for (var skill in this.skills) {
-      $("#skills").append(HTMLskills.replace("%data%", this.skills[skill]));
-    }
+    this.skills.forEach(function(skill) {
+      $("#skills").append(HTMLskills.replace("%data%", skill));
+    });
   },
 };
 
@@ -109,23 +108,22 @@ var work = {
   ]
 };
 work.display = function() {
-  for (var job in work.jobs) {
+  work.jobs.forEach(function(job) {
     $("#workExperience").append(HTMLworkStart);
 
-    var workEmployer = HTMLworkEmployer.replace("%data%",
-      work.jobs[job].employer);
+    var workEmployer = HTMLworkEmployer.replace("%data%", job.employer);
     var workTitle =
-      HTMLworkTitle.replace("%data%", work.jobs[job].title);
+      HTMLworkTitle.replace("%data%", job.title);
     var workEmployerTitle = workEmployer + workTitle;
     $(".work-entry:last").append(workEmployerTitle);
     $(".work-entry:last").append(HTMLworkDates.replace("%data%",
-      work.jobs[job].dates));
+      job.dates));
     $(".work-entry:last").
     append(HTMLworkLocation.replace("%data%",
-      work.jobs[job].location));
-    $(".work-entry:last").append(HTMLworkDescription.replace("%data%", work.jobs[
-      job].description));
-  }
+      job.location));
+    $(".work-entry:last").append(HTMLworkDescription.replace("%data%", 
+      job.description));
+  });
 };
 
 var education = {
@@ -133,11 +131,13 @@ var education = {
     "name": "Nanjing University of Science and Technology",
     "location": "Nanjing China",
     "degree": "Barchelor",
-    "major": "Electronic engineering",
+    "majors": [
+      "Electronic engineering",
+    ],
     "dates": "1994 - 1998",
     "url": "http://www.njust.edu.cn/",
   }],
-  "onlineCourse": [{
+  "onlineCourses": [{
     "title": "Front-end web developer",
     "school": "Udacity",
     "dates": "2017.03 - current",
@@ -146,35 +146,38 @@ var education = {
 };
 education.display = function() {
   $("#education").append(HTMLschoolStart);
-  for (var school in education.schools) {
+
+  education.schools.forEach(function(school) {
     var schoolName = HTMLschoolName.replace("%data%",
-      education.schools[school].name);
+      school.name).replace("#", school.url);
     var schoolDegree =
-      HTMLschoolDegree.replace("%data%", education.schools[school].degree);
+      HTMLschoolDegree.replace("%data%", school.degree);
     var schoolNameDegree = schoolName + schoolDegree;
     $(".education-entry:last").append(schoolNameDegree);
     $(".education-entry:last").append(HTMLschoolDates.replace("%data%",
-      education.schools[school].dates));
+      school.dates));
     $(".education-entry:last").
     append(HTMLschoolLocation.replace("%data%",
-      education.schools[school].location));
+      school.location));
+    school.majors.forEach(function(major) {
     $(".education-entry:last").append(HTMLschoolMajor.replace("%data%",
-      education.schools[school].major));
-  }
+      major));
+    });
+  });
 
   $(".education-entry:last").append(HTMLonlineClasses);
-  for (var course in education.onlineCourse) {
+  for (var course in education.onlineCourses) {
     var onlineTitle = HTMLonlineTitle.replace("%data%",
-      education.onlineCourse[course].title);
+      education.onlineCourses[course].title);
     var onlineSchool =
-      HTMLonlineSchool.replace("%data%", education.onlineCourse[course].school);
+      HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
     var onlineTitleSchool = onlineTitle + onlineSchool;
     $(".education-entry:last").append(onlineTitleSchool);
     $(".education-entry:last").append(HTMLonlineDates.replace("%data%",
-      education.onlineCourse[course].dates));
+      education.onlineCourses[course].dates));
     $(".education-entry:last").
     append(HTMLonlineURL.replace("%data%",
-      education.onlineCourse[course].url));
+      education.onlineCourses[course].url));
   }
 
 };
