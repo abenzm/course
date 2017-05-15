@@ -14,7 +14,7 @@ var bio = {
   "biopic": "images/logo.jpg",
   "welcomeMessage": "Welcome to Myron's blog!",
   "skills": ["Computer", "Swimming", "Driving", "Travel freely"],
-}
+};
 bio.display = function() {
   if (bio.role.length > 0) {
     $("#header").prepend(HTMLheaderRole.replace("%data%", bio.role));
