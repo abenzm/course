@@ -3,7 +3,7 @@ bio is empty on purpose! Your code to build the resume will go here.
  */
 var bio = {
   "name": "Myron Zhang",
-  "role": "Software Managment",
+  "role": "Software Manager",
   "contacts": {
     "mobile": "+86 18566680567",
     "email": "myron.z.zhang@gmail.com",
